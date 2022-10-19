@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mcp</title>
+        <meta name="description" content="a very minimal web color picker">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style.css">
+        <script src="bloat.js" defer></script>
+    </head>
+    <body>
+      <header>
+        <h1 id="title">mcp</h1>
+      </header>
+
+      <main>
+          <label class="label" for="cp">Press the big rectangle (only hex input works for now)</label>
+          <input id="cp" type="color" name="cp" value="#000000">
+
+          <input id="hex" class="inputs" type="text" name="hex" value="#000000">
+          <input id="rgb" class="inputs" type="text" name="rgb" value="rgb(0, 0, 0)">
+          <input id="hsl" class="inputs" type="text" name="hsl" value="hsl(0, 0%, 0%)">
+
+          <noscript>
+              <p><b class=hl>mcp needs J*vascript for functionality.</b></p>
+              <ul>
+                  <li>Display color values</li>
+                  <li>Input color values for previewing</li>
+                  <li>Don't forget to turn off JS after this :]</li>
+              </ul>
+          </noscript>
+      </main>
+
+      <footer>
+          <p>This works offline! I recommend you download it. `Right click` -> `Save page as`</p>
+          <p>JS <a href="https://unlicense.org/">unlicense</a>::2022-10-13</p>
+      </footer>
+
+      <!-- so little css that it doesn't even deserve its own file -->
+      <style type="text/css" media="screen">
+        input{
+            background: transparent;
+            border: 2px solid;
+            color: white;
+            padding: .2rem;
+        }
+
+        #cp{
+            border: 0;
+            padding: 0;
+            width: 100%;
+            height: 10rem;
+        }
+      </style>
+    </body>
+</html>
