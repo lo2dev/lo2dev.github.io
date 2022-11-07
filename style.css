@@ -9,13 +9,10 @@ body{
     max-width: 100%;
 }
 
-pre{
-    font-size: 16px;
-}
-
-.accent{
-    color: red;
-}
+pre{font-size: 16px;}
+.accent{color: red;}
+.wip{color: yellow;}
+.done{color: green;}
 
 a{
     color: currentColor;
