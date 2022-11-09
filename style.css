@@ -1,30 +1,30 @@
+*{
+    padding: 0.1rem;
+    margin: 0;
+}
+
 body{
     background: black;
     color: white;
     font-family: Menlo, Consolas, Monaco,
                  Liberation Mono, Lucida Console, monospace;
-    padding: 0.3rem;
+    font-size: 19px;
     margin: auto;
-    width: 600px;
+    width: 900px;
     max-width: 100%;
 }
 
-pre{font-size: 16px;}
-.accent{color: red;}
-.wip{color: yellow;}
-.done{color: green;}
+h3{font-size: 19px}
+li{list-style: none}
+a{color: currentColor;}
+.subcontent{padding-left: 8ch;}
+header, .content{padding-bottom: 1ch;}
 
-a{
-    color: currentColor;
-    font-weight: bold;
+header{
+    display: flex;
+    justify-content: space-between;
 }
 
-.hl{
-    border: 1px solid;
-    padding: 0 .2rem;
-}
-
-footer{
-    color: hsl(0 0% 40%);
-    font-size: small;
+.content{
+    padding-left: 5ch;
 }
