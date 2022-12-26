@@ -1,31 +1,47 @@
+html {
+  max-width: 70ch;
+  margin: auto;
+  padding: 3em 1em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+	sans-serif;
+  font-size: 1.25em;
+  /* line-height: 1.75; */
+}
+
 body {
-	width: 100%;
-	height: 100vh;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	background: black;
-	color: white;
-	font-family: Iowan Old Style, Apple Garamond, Baskerville,
- Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple
-Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-	padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+  position: relative;
+}
+
+.art {
+	position: absolute;
+	top: 0;
+	right: 0;
 	margin: 0;
+    font-family: monospace, monospace;
+    font-size: 1em;
+	user-select: none;
+	background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	z-index: -1;
 }
 
-.main-left {
-	background: black;
-	padding-top: 2rem;
-	padding-left: 4rem;
-}
-
-.main-left h1 {
-	font-size: 3em;
-}
+h1 { font-weight: lighter; }
 
 a {
-	color: white;
+	color: currentColor;
 	font-weight: bold;
 	text-decoration: none;
+	position: relative;
+}
+
+/* display the url if the html code has no text */
+a[href^="http"]:empty::before {
+  content: attr(href);
 }
 
 li {
@@ -33,14 +49,20 @@ li {
 	list-style: "‒ ";
 }
 
-.main-right {
-	background: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)),
-				url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/19f34579941821.5cd2a70feba98.jpg) no-repeat center center / cover;
-	position: relative;
+.underline-anim::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
+  transform-origin: bottom right;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.main-right .img-credits {
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
+.underline-anim:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
