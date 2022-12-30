@@ -6,7 +6,6 @@ html {
 	Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
 	sans-serif;
   font-size: 1.25em;
-  /* line-height: 1.75; */
 }
 
 body {
@@ -27,7 +26,27 @@ body {
 	background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	z-index: -1;
+
+    animation: 1s intro forwards;
+    animation-delay: .3s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+
+	z-index: 2;
+}
+
+@keyframes intro {
+    from {
+        text-shadow: none;
+    }
+
+    to {
+        text-shadow: 
+            70px 0px 0px #820E0E, 
+            120px 0px 0px #4F0909, 
+            170px 0px 0px #230505,
+            220px 0px 0px #0b0b0b;
+    }
+
 }
 
 h1 { font-weight: lighter; }
@@ -45,7 +64,7 @@ a[href^="http"]:empty::before {
 }
 
 li {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	list-style: "‒ ";
 }
 
