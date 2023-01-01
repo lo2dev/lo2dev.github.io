@@ -18,7 +18,7 @@ body {
 .art {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 100px;
 	margin: 0;
     font-family: monospace, monospace;
     font-size: 1em;
@@ -66,6 +66,11 @@ a[href^="http"]:empty::before {
 li {
 	font-size: 1.2em;
 	list-style: "‒ ";
+}
+
+q {
+    font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    color: hsl(246, 4%, 49%);
 }
 
 .underline-anim::after {
