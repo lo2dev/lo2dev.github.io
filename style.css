@@ -112,3 +112,13 @@ q {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .art {
+    animation: none;
+  }
+
+  .underline-anim::after {
+    transition: 0;
+  }
+}
+
