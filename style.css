@@ -1,3 +1,5 @@
+
+
 html {
   max-width: 70ch;
   margin: auto;
@@ -58,18 +60,13 @@ a {
 	position: relative;
 }
 
-/* display the url if the html code has no text */
-a[href^="http"]:empty::before {
-  content: attr(href);
-}
-
 li {
 	font-size: 1.2em;
 	list-style: "‒ ";
 }
 
 q {
-    font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: serif;
     color: hsl(246, 4%, 49%);
 }
 
@@ -90,3 +87,28 @@ q {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .art {
+    animation: none;
+    background: none;
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: inherit;
+    color: black;
+    font-weight: bold;
+  }
+
+  q {
+    color: hsl(252, 3%, 33.1%);
+  }
+
+  .underline-anim::after {
+    background: black;
+  }
+}
+
