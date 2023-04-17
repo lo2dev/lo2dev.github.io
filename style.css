@@ -43,23 +43,27 @@ main {
 	padding-right: 1rem;
 }
 
+.profile-info {
+  /* background: #333; */
+  border-radius: 5px;
+  padding: 1rem 0rem;
+}
+
 .profile-info h1 {
-	font-family: 'Poppins', sans-serif;
 	font-size: 3rem;
-	font-weight: 300;
+	font-weight: 800;
 }
 
 .profile-info h2 {
-	font-family: 'Poppins', sans-serif;
 	color: #36c692;
 	font-size: 1.2em;
 	font-weight: bold;
 }
 
 hr {
-	margin: 1rem 0;
-	border-color: #949494;
-	border-style: dashed;
+	margin: 2rem 0;
+	border-color: #333;
+  border-style: double;
 }
 
 article {
