@@ -129,7 +129,7 @@ details a {
 
 details>p {
 	padding: 0 1rem;
-	padding-bottom: 2rem;
+	padding-bottom: 1.5rem;
 }
 
 details[open]>summary {
@@ -137,8 +137,7 @@ details[open]>summary {
 }
 
 summary {
-	margin: 2rem 0 0 0;
-	padding: 2rem 1rem;
+	padding: 1.5rem 1rem;
 	font-weight: bold;
 	font-size: 1.3em;
 	cursor: pointer;
