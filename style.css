@@ -28,6 +28,7 @@ body {
 .banner-img {
 	width: 400px;
 	max-width: 100%;
+	filter: invert(1);
 }
 
 main {
@@ -47,7 +48,7 @@ main {
 
 a:not(.button-link, details a),
 .profile-info h2 {
-	background-image: radial-gradient(circle 325px at 19.2% 64.8%, rgba(254, 62, 101, 1) 9.7%, rgba(166, 24, 146, 1) 91.3%);
+	background-image: radial-gradient(circle 325px at 19.2% 64.8%, #4ecf4e 9.7%, #93e693 91.3%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -128,7 +129,7 @@ details a {
 
 details>p {
 	padding: 0 1rem;
-	padding-bottom: 2rem;
+	padding-bottom: 1.5rem;
 }
 
 details[open]>summary {
@@ -136,11 +137,9 @@ details[open]>summary {
 }
 
 summary {
-	margin: 2rem 0 0 0;
-	padding: 2rem 1rem;
+	padding: 1.5rem 1rem;
 	font-weight: bold;
 	font-size: 1.3em;
-	list-style: none;
 	cursor: pointer;
 }
 
