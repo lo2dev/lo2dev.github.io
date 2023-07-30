@@ -94,6 +94,12 @@ a {
 	font-weight: bold;
 }
 
+footer {
+	text-align: right;
+	padding: 1rem 0;
+}
+
+
 .button-link {
 	padding: .6rem 1rem;
 }
@@ -114,6 +120,7 @@ a {
 }
 
 details {
+	margin-top: 1rem;
 	background: #202020;
 }
 
@@ -143,18 +150,17 @@ summary {
 	cursor: pointer;
 }
 
+.kije {
+	width: 100%;
+	text-align: center;
+}
+
 #raccoon {
-	fill: transparent;
-	transition: .2s;
-}
-
-#raccoon:hover {
-	fill: whitesmoke;
-}
-
-footer {
-	text-align: right;
-	padding: 1rem 0;
+	fill: white;
+	width: 25px;
+	height: 25px;
+	margin: 5rem 0;
+	text-align: center;
 }
 
 @media screen and (max-width: 600px) {
