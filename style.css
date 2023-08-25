@@ -18,14 +18,15 @@ a { color: currentColor; }
 .flickr, 
 .github, 
 .coffee {
-  padding: .1rem .3rem;
+  padding: .1rem .2rem;
+  font-weight: bold;
 }
 
-.flickr { background: hsla(329, 100%, 50%, 60%); }
+.flickr { color: hsl(329, 100%, 60%); }
 
-.github { background: hsla(0, 0%, 100%, 30%); }
+.github { color: hsl(0, 0%, 100%); }
 
-.coffee { background: hsla(52, 100%, 55%, 50%); }
+.coffee { color: hsl(52, 100%, 45%); }
 
 footer { margin-top: 4rem; }
 
