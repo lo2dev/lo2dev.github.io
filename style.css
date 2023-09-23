@@ -1,19 +1,34 @@
+:root {
+  --accent: hsl(165, 100%, 40%);
+  --white: color-mix(in hsl, var(--accent) 20%, white);
+  --general-border-radius: 30px;
+}
+
 body {
   width: 80ch;
   max-width: 100%;
   margin: auto;
   padding: 15rem 1.5rem;
 
-  background: #060809;
+  /* background: #060809; */
+  background: color-mix(in hsl, var(--accent) 10%, black);
   color: white;
   font-family: sans-serif;
 }
 
-h1 { font-size: 2.5rem; }
+h1 { 
+  width: fit-content;
+  font-size: 2.5rem; 
+}
 
-p { color: whitesmoke; }
+p { 
+  color: var(--white); 
+}
 
-a { color: currentColor; }
+a { 
+  color: var(--white); 
+  font-weight: bold;
+}
 
 .flickr, 
 .github, 
