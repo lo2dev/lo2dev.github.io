@@ -1,6 +1,6 @@
 :root {
   --accent: #6779FF;
-  --bradius: 15px;
+  --bradius: 10px;
 }
 
 * {
@@ -8,7 +8,7 @@
 }
 
 body {
-  width: 80ch;
+  width: 70ch;
   max-width: 100%;
   display: flex;
   margin: auto;
@@ -18,18 +18,8 @@ body {
   font-family: sans-serif;
 }
 
-h1 { 
-  width: fit-content;
-  font-size: 2.5rem; 
-}
-
-p { 
-  color: var(--white); 
-}
-
 a { 
-  color: var(--white); 
-  font-weight: bold;
+  color: whitesmoke;
 }
 
 main {
@@ -39,73 +29,78 @@ main {
   padding: 1rem 0.5rem;
 }
 
+.section {
+  border-radius: 10px;
+  padding: 1rem;
+  background: #333;
+  margin-bottom: .5rem;
+}
+
 .chrome-warning {
   display: none;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 15px;
   background: hsl(356, 71%, 39%);
 }
 
-.banner, .banner img {
-  border-radius: var(--bradius);
-}
-
 .banner {
+  height: 180px;
+  border-radius: var(--bradius);
+  background: url("./img/bg2.webp");
+  background-size: cover;
+  background-position: 0 15%;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.name-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.bunch {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.bunch p, .bunch h1 {
+  margin: 0;
+}
+
+.pfp {
+  width: 130px;
+  height: 130px;
+  border-radius: 200px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.tagline {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background-size: 1800% 1800%;
-  animation: gradient_anim 50s both linear infinite;
-}
-
-@keyframes gradient_anim { 
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-
-.banner img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-}
-
-.browser-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 10rem;
-  padding: .5rem .5rem;
-  margin-bottom: .5rem;
-  text-align: left;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.browser-icon {
-  width: 20px;
-  height: 20px;
-  fill: white;
+  gap: .5rem;
 }
 
 .firefox {
   color: white;
-  background: linear-gradient(45deg, hsl(254, 81%, 64%) 40%, hsl(8, 100%, 61%) 80%, hsl(54, 100%, 65%) 100%);
-  background: hsl(8, 100%, 61%);
+  background: #09031c;
+  text-align: center;
+  margin: 0;
 }
 
-.librewolf {
-  color: white;
-  background: hsl(200, 100%, 50%);
+.firefox-link {
+  display: inline-block;
+  padding: .7rem 1rem;
+  margin: 1rem 0;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: var(--bradius);
 }
 
-.gnomeweb {
-  color: white;
-  background: hsl(150deg 46.66% 42.74%);
+.firefox-logo {
+  --ratio: 150px;
+  width: var(--ratio);
+  height: var(--ratio);
 }
 
 .projects {
@@ -125,21 +120,36 @@ main {
 
 .project-link {
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: var(--bradius);
   box-shadow: 0 10px 30px hsla(0, 0%, 0%, 10%), 0 1px 8px hsla(0, 0%, 0%, 20%);
   background-blend-mode: color;
   background-size: cover;
   background-position: 100% 35%;
 }
 
-.flickr { color: hsl(329, 100%, 60%); }
-.github { color: hsl(0, 0%, 100%); }
+.flickr { color: hsl(133, 76%, 75%) }
+.github { color: hsl(56, 92%, 70%) }
 .coffee { color: hsl(52, 100%, 45%); }
 
 .dim {
   color: hsl(0, 0%, 56%);
   fill: hsl(0, 0%, 56%);
   font-style: italic;
+}
+
+.certified {
+  --color: hsl(141, 71%, 62%); 
+  color: var(--color);
+  background: color-mix(in hsl shorter hue, var(--color) 30%, black 80%);
+  margin-top: 5rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.big-section-icon {
+  --ratio: 60px;
+  width: var(--ratio);
+  height: var(--ratio);
 }
 
 .kije {
