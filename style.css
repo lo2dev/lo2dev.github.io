@@ -1,7 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&display=swap');
 
+/* Light theme by default */
 :root {
-	--accent: hsl(12, 27%, 29%);
+	--primary-foreground: hsl(9, 12%, 11%);
+
+	--primary-view-background: hsl(300, 100%, 99%);
+	--secondary-view-background: hsl(340, 47%, 96%);
+
+	--primary-element-background: hsl(11, 100%, 91%);
+	--secondary-element-background: hsl(43, 88%, 80%);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-foreground: hsl(11, 31%, 90%);
+
+		--primary-view-background: hsl(9, 12%, 11%);
+		--secondary-view-background: hsl(11, 15%, 15%);
+
+		--primary-element-background: hsl(12, 27%, 29%);
+		--secondary-element-background: hsl(46, 65%, 20%);
+	}
 }
 
 * {
@@ -19,15 +38,20 @@ body {
   flex-direction: column;
   margin: auto;
   padding: 0 .5rem;
-	background: hsl(9, 12%, 11%);
-  color: white;
+	background: var(--primary-view-background);
+  color: var(--primary-foreground);
 	font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-a { 
-  color: whitesmoke;
+a {
+	color: currentColor;
+}
+
+img {
+  border-radius: 0.75rem;
+  margin-bottom: .5rem;
 }
 
 main {
@@ -40,28 +64,33 @@ main {
 .section, .card-container {
   border-radius: 0.75rem;
   padding: 1rem;
-  margin-bottom: .5rem;
+}
+
+.section {
+	margin-bottom: 7rem;
 }
 
 .card-container {
 	display: flex;
 	flex-direction: column;
-	background: hsl(11, 15%, 15%);
+	background: var(--secondary-view-background);
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 	border: 1px solid transparent;
+	margin-bottom: 2rem;
 	transition: .2s;
-}
-
-.card-container:hover {
-	border: 1px solid #4f4645;
 }
 
 .card-title {
 	display: flex;
 	align-items: center;
 	gap: .5rem;
-	margin: 0;
+	margin: 0.3rem;
 	font-size: 1.5em;
+}
+
+.card-subtitle {
+	color: hsl(0, 0%, 56%);
+	margin: 0;
 	margin-bottom: 1.5rem;
 }
 
@@ -69,29 +98,20 @@ main {
 	align-self: flex-end;
 }
 
-.section-group-link {
-	display: grid;
-	place-content: center;
-	border-radius: 30px;
-	padding: .7rem;
-	background: hsl(12, 27%, 29%);
-	transition: 0.3s;
+.image-card-container {
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.75rem;
+	margin-bottom: 1rem;
 }
 
-.topic-links {
+.image-card-container img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.image-card-caption {
+	color: hsl(0, 0%, 56%);
 	font-size: 1.3em;
-}
-
-.button-link, .card-button-link {
-	padding: .8rem 1.5rem;
-	border-radius: 40px;	
-	background: hsl(12, 27%, 29%);
-	text-decoration: none;
-	transition: 0.3s;
-}
-
-.button-link:hover, .section-group-link:hover {
-	border-radius: 10px;
 }
 
 .section-title-container {
@@ -103,6 +123,41 @@ main {
 .section-label {
 	font-size: 2em;
   font-weight: 700;
+	margin-bottom: .5rem;
+}
+
+.section-group-link {
+	display: grid;
+	place-content: center;
+	border-radius: 30px;
+	padding: .7rem;
+	background: var(--secondary-element-background);
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.section-group-link > svg {
+	stroke: var(--primary-foreground);
+}
+
+.topic-links {
+	font-size: 1.3em;
+}
+
+.button-link, .card-button-link {
+	padding: .8rem 1.5rem;
+	border-radius: 40px;	
+	background: var(--primary-element-background);
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.button-link:hover, .section-group-link:hover {
+	border-radius: 10px;
+}
+
+.disabled {
+	pointer-events: none;
 }
 
 .hero {
@@ -131,7 +186,7 @@ main {
 }
 
 .title {
-	color: hsl(11, 31%, 90%);
+	color: var(--primary-foreground);
   font-size: 3em;
   font-family: "Pacifico", cursive;
   font-style: normal;
@@ -172,28 +227,16 @@ main {
   font-style: italic;
 }
 
-.certified {
-  --color: hsl(141, 71%, 62%); 
-  color: var(--color);
-  background: color-mix(in hsl shorter hue, var(--color) 30%, black 80%);
-  margin-top: 5rem;
-  padding-top: 2rem;
-  text-align: center;
-}
-
-.big-section-icon {
-  width: 60px;
-  height: auto;
-}
-
 .kije {
   width: 30px;
   height: auto;
 }
 
 footer {
-  margin: 7rem 0;
+	margin: 7rem 0 5rem 0;
   display: flex;
   align-items: center;
+	flex-direction: column;
   justify-content: center;
+	gap: 1.5rem;
 }
