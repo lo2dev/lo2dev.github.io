@@ -3,6 +3,7 @@
 /* Light theme by default */
 :root {
 	--primary-foreground: hsl(9, 12%, 11%);
+	--accent-foreground: hsl(11, 59%, 39%);
 
 	--primary-view-background: hsl(300, 100%, 99%);
 	--secondary-view-background: hsl(340, 47%, 96%);
@@ -14,6 +15,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--primary-foreground: hsl(11, 31%, 90%);
+		--accent-foreground: hsl(11, 100%, 82%);
 
 		--primary-view-background: hsl(9, 12%, 11%);
 		--secondary-view-background: hsl(11, 15%, 15%);
@@ -32,17 +34,17 @@ html {
 }
 
 body {
-  width: 70ch;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  padding: 0 .5rem;
+	width: 70ch;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 0 .5rem;
 	background: var(--primary-view-background);
-  color: var(--primary-foreground);
+	color: var(--primary-foreground);
 	font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 a {
@@ -61,6 +63,35 @@ main {
   padding: 0 0.5rem;
 }
 
+.topic-links {
+	width: 14rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: .4rem;
+	justify-content: center;
+	font-size: 1.3em;
+}
+
+.button-link, .card-button-link {
+	padding: .8rem 1.5rem;
+	border-radius: 40px;	
+	background: var(--primary-element-background);
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.button-link:hover, .section-group-link:hover {
+	border-radius: 10px;
+}
+
+.support-me {
+	background: var(--secondary-element-background);
+}
+
+.disabled {
+	pointer-events: none;
+}
+
 .section, .card-container {
   border-radius: 0.75rem;
   padding: 1rem;
@@ -68,50 +99,6 @@ main {
 
 .section {
 	margin-bottom: 7rem;
-}
-
-.card-container {
-	display: flex;
-	flex-direction: column;
-	background: var(--secondary-view-background);
-	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-	border: 1px solid transparent;
-	margin-bottom: 2rem;
-	transition: .2s;
-}
-
-.card-title {
-	display: flex;
-	align-items: center;
-	gap: .5rem;
-	margin: 0.3rem;
-	font-size: 1.5em;
-}
-
-.card-subtitle {
-	color: hsl(0, 0%, 56%);
-	margin: 0;
-	margin-bottom: 1.5rem;
-}
-
-.card-button-link {
-	align-self: flex-end;
-}
-
-.image-card-container {
-	display: flex;
-	flex-direction: column;
-	border-radius: 0.75rem;
-	margin-bottom: 1rem;
-}
-
-.image-card-container img {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.image-card-caption {
-	color: hsl(0, 0%, 56%);
-	font-size: 1.3em;
 }
 
 .section-title-container {
@@ -140,24 +127,48 @@ main {
 	stroke: var(--primary-foreground);
 }
 
-.topic-links {
+.card-container {
+	display: flex;
+	flex-direction: column;
+	background: var(--secondary-view-background);
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+	border: 1px solid transparent;
+	margin-bottom: 2rem;
+	transition: .2s;
+}
+
+.card-title {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	margin: 0.3rem;
+	font-size: 1.5em;
+}
+
+.card-subtitle {
+	color: hsl(0, 0%, 44%);
+	margin: 0;
+	margin-bottom: 1.5rem;
+}
+
+.card-button-link {
+	align-self: flex-end;
+}
+
+.image-card-container {
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.image-card-container img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.image-card-caption {
+	color: hsl(0, 0%, 56%);
 	font-size: 1.3em;
-}
-
-.button-link, .card-button-link {
-	padding: .8rem 1.5rem;
-	border-radius: 40px;	
-	background: var(--primary-element-background);
-	text-decoration: none;
-	transition: 0.3s;
-}
-
-.button-link:hover, .section-group-link:hover {
-	border-radius: 10px;
-}
-
-.disabled {
-	pointer-events: none;
 }
 
 .hero {
@@ -185,12 +196,20 @@ main {
   margin: 0;
 }
 
-.title {
+.title, .title-sans {
 	color: var(--primary-foreground);
-  font-size: 3em;
-  font-family: "Pacifico", cursive;
-  font-style: normal;
+	font-size: 3em;
+	font-style: normal;
+	font-optical-sizing: auto;
 	position: relative;
+}
+
+.title {
+	font-family: "Pacifico", cursive;
+}
+
+.title-sans {
+	font-family: "Outfit", sans-serif;
 }
 
 .title::before, .title::after {
@@ -234,9 +253,9 @@ main {
 
 footer {
 	margin: 7rem 0 5rem 0;
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 	flex-direction: column;
-  justify-content: center;
+	justify-content: center;
 	gap: 1.5rem;
 }
