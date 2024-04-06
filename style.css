@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&display=swap');
+@import "./gallery.css";
 
 /* Light theme by default */
 :root {
@@ -153,22 +154,6 @@ main {
 
 .card-button-link {
 	align-self: flex-end;
-}
-
-.image-card-container {
-	display: flex;
-	flex-direction: column;
-	border-radius: 0.75rem;
-	margin-bottom: 1rem;
-}
-
-.image-card-container img {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.image-card-caption {
-	color: hsl(0, 0%, 56%);
-	font-size: 1.3em;
 }
 
 .hero {
