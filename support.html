@@ -11,9 +11,13 @@
 <body>
   <main>
     <section class="hero">
-      <div class="name-container">
+      <div class="hero-title-container">
         <span class="material-symbols-outlined hero-icon">volunteer_activism</span>
-        <h1 class="title-sans">Support Me</h1>
+        <div class="title-with-backlink">
+          <a href="./" class="back-link title-sans">⟵</a>
+          <h1 class="title-sans">Support Me</h1>
+        </div>
+
         <p>If you found my work useful or interesting then I would appreciate any amount of support from you ! 
             <br>
             <br>
@@ -24,10 +28,6 @@
         </div>
     </div>
     </section>
-
-      <footer class="dim">
-            <a href="./">home</a>
-      </footer>
   </main>
 
   <style>
@@ -35,7 +35,7 @@
     .hero-icon {
     	font-size: 5em;
     	margin-bottom: 3rem;
-        color: var(--accent-foreground);
+      color: var(--accent-foreground);
     }
 
     p {
