@@ -149,7 +149,6 @@ main {
 .card-subtitle {
 	color: hsl(0, 0%, 44%);
 	margin: 0;
-	margin-bottom: 1.5rem;
 }
 
 .card-button-link {
@@ -248,5 +247,4 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	gap: 1.5rem;
 }
